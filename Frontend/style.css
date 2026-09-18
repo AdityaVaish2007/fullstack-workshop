@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #9f2d0a;
+    margin: 40px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+section {
+    background: rgba(205, 152, 4, 0.838);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.event {
+    border: 1px solid #140e0e;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.event h3 {
+    margin-top: 0;
+}
