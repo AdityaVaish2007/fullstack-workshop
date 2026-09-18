@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "";
 
 
 // =================================
@@ -200,4 +200,4 @@ async function registerEvent(id) {
 // LOAD EVENTS WHEN PAGE OPENS
 // =================================
 
-loadEvents();v
+loadEvents();

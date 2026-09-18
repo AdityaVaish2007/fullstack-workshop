@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from flask import Flask, request, jsonify  # type: ignore[import-not-found]
+from flask import Flask, request, jsonify, send_from_directory  # type: ignore[import-not-found]
 import sqlite3
 
 
@@ -67,16 +67,17 @@ def create_table():
 create_table()
 
 
-# =================================
-# API HEALTH CHECK
-# =================================
+FRONTEND_PATH = Path(__file__).resolve().parent.parent / "Frontend"
+
 
 @app.route("/", methods=["GET"])
-def health_check():
+def home():
+    return send_from_directory(FRONTEND_PATH, "index.html")
 
-    return jsonify({
-        "message": "College Event Tracker API is running."
-    })
+
+@app.route("/<path:filename>")
+def frontend_files(filename):
+    return send_from_directory(FRONTEND_PATH, filename)
 
 
 # =================================
